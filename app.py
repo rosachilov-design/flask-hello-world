@@ -4,6 +4,13 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 import yt_dlp
 
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello world"
+
 logging.basicConfig(level=logging.INFO)
 
 BOT_TOKEN = "8414363077:AAFiflBPXEBqI08IlsHhfcvuhiHwrbaCZ2Q"
